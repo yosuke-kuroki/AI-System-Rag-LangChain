@@ -166,7 +166,23 @@ Below are some example interactions from the notebook (which you can also verify
   - **Assistant Response:**  
     `I am an intelligent assistant designed to provide you with up-to-date information about PeakSpan MasterClasses, team profiles, investments, sectors, and related insights. I retrieve document-based context and external API data to help answer your questions accurately. How may I assist you today?`
 
-And many more features can be tested interactively in the notebook.
+- **Example 5: Query about a Specific PeakSpan Team Member**
+  - **User Query:** `Can you tell me more about Scott Varner?`
+  - **Assistant Response:**  
+    Retrieves detailed information about Scott Varner, including his role, background, and insights based on the API data.
+  - **Example:**
+  ```plaintext
+  Your Query: Tell me about Scott Varner
+
+  Assistant: Scott Varner is a Managing Partner at PeakSpan Capital, where he focuses on investments in the technology and software sectors. He brings over 20 years of experience in the industry to his role, having held various leadership positions at companies such as Microsoft, IBM, and Oracle.
+
+  Varner has a track record of success in building and scaling high-growth businesses, and he is known for his ability to identify and support promising startups and entrepreneurs. At PeakSpan Capital, he leads the firm's investments in companies such as Calendly, Cameo, Doolittle, Flock Safety, GrowTech, Hive, Intricelabs, Jobber, and LinguaSnap, among others.
+
+  Varner is also recognized for his commitment to diversity and inclusion in the tech industry. He has been featured in numerous publications, including Forbes, Fortune, and TechCrunch, and he regularly speaks at industry events and conferences.
+
+  In addition to his investment work, Varner is also involved in various philanthropic initiatives, focusing on education and workforce development programs. He serves on the boards of several non-profit organizations and is a mentor to several startup founders and entrepreneurs.
+  ```
+And many more features can be tested interactively in the notebook!
 
 ---
 
@@ -191,7 +207,7 @@ Google Colab provides a free, cloud-based Jupyter notebook environment with GPU 
 
 Thus, I have elected to use Google Colab for this project to leverage its great GPU capabilities, easy setup, and seamless integration with external APIs and services. 
 
-I have also tested the code so that it works on my MacOS (Local) and Windows (Local) machines, with minor adjustments. However, the performance was quite poor compared to Google Colab.
+I have also tested the code so that it works on my MacOS (Local) and Windows (Local) machines, with minor adjustments. However, the performance was quite poor compared to Google Colab, so I recommend using Google Colab for the best experience.
 
 ---
 
