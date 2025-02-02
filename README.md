@@ -187,7 +187,7 @@ And many more features can be tested interactively in the notebook.
 
 ## Code Sharing 
 
-- **BitBucket Repository:** 
+- **BitBucket Repository:** [https://bitbucket.org/hoangsonw/rag-system-peakspan](https://bitbucket.org/hoangsonw/rag-system-peakspan)
 - **Google Drive Link for the Colab Notebook:** [https://colab.research.google.com/drive/1rIYsnLwLvSit4Xf7VyT_IIFyDFlohyH7?usp=sharing](https://colab.research.google.com/drive/1rIYsnLwLvSit4Xf7VyT_IIFyDFlohyH7?usp=sharing)
 
 ---
