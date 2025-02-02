@@ -2,8 +2,8 @@
 
 This repository contains a Google Colab Notebook that implements a Retrieval-Augmented Generation (RAG) system for portfolio support. The system integrates document retrieval, dynamic entity extraction, and external API calls to generate informed, context-aware responses using a Hugging Face language model via Ollama. The entire application runs in Google Colab and is designed to work on both Linux and Windows environments.
 
-**Author:** David Nguyen
-**Project for:** PeakSpan Capital
+- **Author:** David Nguyen
+- **Project for:** PeakSpan Capital
 
 ---
 
@@ -182,6 +182,14 @@ And many more features can be tested interactively in the notebook.
     - Preserving conversation history across queries was critical for generating context-aware responses. I implemented a global variable (or session mechanism) to store and update conversation history.
   - Configuring ngrok in Google Colab (including setting the ngrok authtoken) to expose the Flask app:
     - Exposing the Flask app via ngrok required additional setup, including installing pyngrok and setting the ngrok authtoken. I followed online guides and adjusted parameters to ensure a stable public URL.
+
+---
+
+## Why Use Google Colab
+
+Google Colab provides a free, cloud-based Jupyter notebook environment with GPU support, making it an ideal platform for running AI models, training neural networks, and executing complex computations compared to local machines.
+
+Thus, I have elected to use Google Colab for this project to leverage its great GPU capabilities, easy setup, and seamless integration with external APIs and services. 
 
 ---
 
