@@ -191,6 +191,8 @@ Google Colab provides a free, cloud-based Jupyter notebook environment with GPU 
 
 Thus, I have elected to use Google Colab for this project to leverage its great GPU capabilities, easy setup, and seamless integration with external APIs and services. 
 
+I have also tested the code so that it works on my MacOS (Local) and Windows (Local) machines, with minor adjustments. However, the performance was quite poor compared to Google Colab.
+
 ---
 
 ## Code Sharing 
