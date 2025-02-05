@@ -56,7 +56,7 @@ logging.error = lambda *args, **kwargs: None
 #########################
 
 # Replace the URL with your own API if you are hosting it elsewhere
-API_BASE_URL = "https://internship-api-phi.vercel.app"
+API_BASE_URL = "https://rag-langchain-ai-system.onrender.com"
 DOCUMENTS_DOWNLOAD_ENDPOINT = f"{API_BASE_URL}/api/documents/download"
 API_TOKEN = "token"  # Replace with your actual API token
 

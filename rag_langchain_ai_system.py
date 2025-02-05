@@ -56,9 +56,9 @@ logging.error = lambda *args, **kwargs: None
 #########################
 
 # Replace the URL if you are hosting the API elsewhere and have a different base URL
-API_BASE_URL = "https://internship-api-phi.vercel.app"
+API_BASE_URL = "https://rag-langchain-ai-system.onrender.com"
 DOCUMENTS_DOWNLOAD_ENDPOINT = f"{API_BASE_URL}/api/documents/download"
-API_TOKEN = "token"  # Replace with your API token
+API_TOKEN = "token"  # Call the /auth/token endpoint first to get a token
 
 # NOTE: If you are using the sample Express API in this repo, you can call the API endpoint at /auth/token
 # and use the token generated from the response here.
