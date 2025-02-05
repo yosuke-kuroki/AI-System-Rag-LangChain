@@ -1,6 +1,6 @@
 # LangChain & RAG System for Portfolio Support in Google Colab
 
-This repository contains a Google Colab Notebook that implements a Retrieval-Augmented Generation (RAG) system for portfolio support. The system integrates document retrieval, dynamic entity extraction, and external API calls to generate informed, context-aware responses using a Hugging Face language model via Ollama. The entire application runs in Google Colab and is designed to work on both Linux and Windows environments.
+This repository contains a [Google Colab Notebook](RAG_LangChain_AI_System.ipynb) that implements a Retrieval-Augmented Generation (RAG) system for portfolio support. The system integrates document retrieval, dynamic entity extraction, and external API calls to generate informed, context-aware responses using a Hugging Face language model via Ollama. The entire application runs in Google Colab and is designed to work on both Linux and Windows environments.
 
 In addition to that, this repository also contains a Flask app that serves as an API endpoint for the RAG system. The app allows users to interact with the RAG system via HTTP POST requests, enabling seamless integration with other applications and services.
 
@@ -8,7 +8,7 @@ Additionally, it also includes a sample backend Express API that can be used to 
 
 - **Author:** [Son Nguyen](https://github.com/hoangsonww)
 
-> This project was done as part of the PeakSpan Capital technical assessment & portfolio support project.
+> This project was done as part of the PeakSpan Capital technical assessment & portfolio support project. The Google Colab notebook is at [RAG_LangChain_AI_System.ipynb](RAG_LangChain_AI_System.ipynb).
 
 ## Table of Contents
 
