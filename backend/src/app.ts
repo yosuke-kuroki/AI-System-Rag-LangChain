@@ -53,6 +53,10 @@ const options = {
     },
     servers: [
       {
+        url: "https://rag-langchain-ai-system.onrender.com",
+        description: "Production server",
+      },
+      {
         url: `http://localhost:${PORT}`,
         description: "Local server",
       },
