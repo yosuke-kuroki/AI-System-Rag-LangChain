@@ -1,9 +1,338 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
-  title: $Title$
-  description: $Title$
-  version: 1.0.0
+  title: RAG System Backend API
+  version: "1.0.0"
+  description: API Documentation for the RAG System Backend API
+  termsOfService: http://example.com/terms
+  contact:
+    name: Son Nguyen
+    url: http://example.com/sonnguyen
+    email: son.nguyen@example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 servers:
-  - url: '$https$'
+  - url: http://localhost:3456
+    description: Local server
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+tags:
+  - name: Auth
+    description: Authentication related endpoints
+  - name: Ping
+    description: Ping endpoint to check API connectivity
+  - name: Documents
+    description: Document download endpoints
+  - name: Team
+    description: Team member endpoints
+  - name: Investments
+    description: Investment endpoints
+  - name: Sectors
+    description: Sector endpoints
+  - name: Consultations
+    description: Consultation endpoints
+  - name: Scrape
+    description: Web scraping endpoints
 paths:
-  $END$
+  /auth/token:
+    get:
+      tags:
+        - Auth
+      summary: Returns a dummy bearer token.
+      responses:
+        '200':
+          description: A dummy bearer token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: psJN7z3J9q
+  /ping:
+    get:
+      tags:
+        - Ping
+      summary: Returns the authenticated user details.
+      responses:
+        '200':
+          description: The authenticated user's details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: John Doe
+                  email:
+                    type: string
+                    example: john.doe@example.com
+        '401':
+          description: Unauthorized.
+  /api/documents/download:
+    get:
+      tags:
+        - Documents
+      summary: Zips and downloads all documents from the documents folder.
+      responses:
+        '200':
+          description: A zip file containing the documents.
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        '500':
+          description: Documents directory not found or an error occurred while creating the zip.
+  /api/team:
+    get:
+      tags:
+        - Team
+      summary: Returns team member details (excludes related_insights).
+      description: Retrieves details for a specific team member, excluding related insights.
+      parameters:
+        - in: query
+          name: name
+          required: true
+          description: The full name of the team member.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Team member details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: John Doe
+                  role:
+                    type: string
+                    example: Chief Technology Officer
+                  bio:
+                    type: string
+                    example: John has over 15 years of experience...
+                  personal_quote:
+                    type: string
+                    example: Innovation distinguishes between a leader and a follower.
+        '400':
+          description: Query parameter "name" is missing.
+        '404':
+          description: Team member not found.
+        '500':
+          description: Internal server error.
+  /api/team/insights:
+    get:
+      tags:
+        - Team
+      summary: Returns only the related insights for a team member.
+      description: Retrieves the insights associated with a team member.
+      parameters:
+        - in: query
+          name: name
+          required: true
+          description: The full name of the team member.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of related insights.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                      example: Innovative Solutions in 2023
+                    date:
+                      type: string
+                      example: "01/15/2023"
+                    link:
+                      type: string
+                      example: https://example.com/insight
+        '400':
+          description: Query parameter "name" is missing.
+        '404':
+          description: Team member not found.
+        '500':
+          description: Internal server error.
+  /api/investments:
+    get:
+      tags:
+        - Investments
+      summary: Returns investment details for a company (excludes insights).
+      parameters:
+        - in: query
+          name: company_name
+          required: true
+          description: The company name to retrieve.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Investment details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  company_name:
+                    type: string
+                    example: Larson LLC
+                  location:
+                    type: string
+                    example: Prohaskabury, TN
+                  website:
+                    type: string
+                    example: https://amy.org
+                  sectors:
+                    type: array
+                    items:
+                      type: string
+                      example: Technology
+        '400':
+          description: Query parameter "company_name" is missing.
+        '404':
+          description: Company not found.
+        '500':
+          description: Server error.
+  /api/investments/insights:
+    get:
+      tags:
+        - Investments
+      summary: Returns only the insights for a company.
+      parameters:
+        - in: query
+          name: company_name
+          required: true
+          description: The company name to retrieve insights for.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of insights.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '400':
+          description: Query parameter "company_name" is missing.
+        '404':
+          description: Company not found.
+        '500':
+          description: Server error.
+  /api/sectors:
+    get:
+      tags:
+        - Sectors
+      summary: Returns details for a specific sector.
+      parameters:
+        - in: query
+          name: sector
+          required: true
+          description: The name of the sector.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Sector details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sector:
+                    type: string
+                    example: Clothing
+                  description:
+                    type: string
+                    example: Description of the clothing sector.
+                  companies:
+                    type: array
+                    items:
+                      type: string
+                      example: Brand A
+                  investment_team:
+                    type: array
+                    items:
+                      type: string
+                      example: Team Member A
+        '400':
+          description: Query parameter "sector" is missing.
+        '404':
+          description: Sector not found.
+        '500':
+          description: Server error.
+  /api/consultations:
+    get:
+      tags:
+        - Consultations
+      summary: Returns consultation details for a specific consultant.
+      parameters:
+        - in: query
+          name: name
+          required: true
+          description: The consultant's name to search for within consultation details.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of consultation details.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '400':
+          description: Query parameter "name" is missing.
+        '404':
+          description: No consultations found for the consultant.
+        '500':
+          description: Server error.
+  /api/scrape:
+    get:
+      tags:
+        - Scrape
+      summary: Simulates scraping an insights page and returns fake scraped data.
+      parameters:
+        - in: query
+          name: url
+          required: true
+          description: The URL of the insights page to scrape.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fake scraped data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    example: Fake Title
+                  content:
+                    type: string
+                    example: Fake scraped content that simulates real data...
+                  date_published:
+                    type: string
+                    example: "1/1/2020"
+        '400':
+          description: Query parameter "url" is missing.

@@ -6,8 +6,22 @@ import path from "path";
 const router = Router();
 
 /**
- * GET /api/documents/download
- * Zips and downloads all documents from the documents folder.
+ * @openapi
+ * /api/documents/download:
+ *   get:
+ *     summary: Zips and downloads all documents from the documents folder.
+ *     tags:
+ *       - Documents
+ *     responses:
+ *       200:
+ *         description: A zip file containing the documents.
+ *         content:
+ *           application/zip:
+ *             schema:
+ *               type: string
+ *               format: binary
+ *       500:
+ *         description: Documents directory not found or an error occurred while creating the zip.
  */
 router.get("/download", (req: Request, res: Response) => {
   const documentsDir = path.join(__dirname, "../../documents");

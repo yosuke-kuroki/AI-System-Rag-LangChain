@@ -17,7 +17,7 @@ export function bearerAuth(req: Request, res: Response, next: NextFunction) {
 
   const token = authHeader.split(" ")[1];
   // For demo purposes, accept only "valid-token"
-  if (token !== "valid-token") {
+  if (token !== "psJN7z3J9q") {
     return res.status(401).json({ error: "Unauthorized" });
   }
 

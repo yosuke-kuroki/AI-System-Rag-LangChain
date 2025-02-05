@@ -1,11 +1,73 @@
-# RAG System for Portfolio Support in Google Colab
+# LangChain & RAG System for Portfolio Support in Google Colab
 
 This repository contains a Google Colab Notebook that implements a Retrieval-Augmented Generation (RAG) system for portfolio support. The system integrates document retrieval, dynamic entity extraction, and external API calls to generate informed, context-aware responses using a Hugging Face language model via Ollama. The entire application runs in Google Colab and is designed to work on both Linux and Windows environments.
 
-- **Author:** David Nguyen
-- **Project for:** PeakSpan Capital
+In addition to that, this repository also contains a Flask app that serves as an API endpoint for the RAG system. The app allows users to interact with the RAG system via HTTP POST requests, enabling seamless integration with other applications and services.
 
----
+Additionally, it also includes a sample backend Express API that can be used to interact with the RAG system. The system can (and should) query from the API to get more data to generate better-informed responses.
+
+- **Author:** [Son Nguyen](https://github.com/hoangsonww)
+
+> This project was done as part of the PeakSpan Capital technical assessment & portfolio support project.
+
+## Table of Contents
+
+- [Overview](#LangChain--RAG-System-for-Portfolio-Support-in-Google-Colab)
+- [Key Features](#key-features)
+- [Embedding and Language Models Used](#embedding-and-language-models-used)
+- [Strategies for Retrieval Accuracy and Persistent Memory](#strategies-for-retrieval-accuracy-and-persistent-memory)
+- [API Tool Integration Methodology](#api-tool-integration-methodology)
+- [How to Deploy / Use the Code](#how-to-deploy--use-the-code)
+- [Running the Sample Backend Express API](#running-the-sample-backend-express-api)
+- [Demonstration Examples](#demonstration-examples)
+- [Why Use Google Colab](#why-use-google-colab)
+- [Code Sharing](#code-sharing-)
+- [Additional Resources](#additional-resources)
+- [Conclusion](#conclusion)
+
+## Key Features
+
+- **Document Processing and Retrieval:**  
+  - Downloads and extracts MasterClass documents.
+  - Splits documents into text chunks for embedding.
+  - Builds a FAISS vector store for efficient retrieval.
+- **Persistent Memory and Context Preservation:**  
+  - Maintains conversation history for context-aware responses.
+  - Handles follow-up questions and maintains coherence.
+- **Dynamic Entity Extraction:**  
+  - Extracts entities from user queries and conversation history.
+  - Calls external APIs based on extracted entities.
+- **Error Handling and Robustness:**  
+  - Implements error handling for document retrieval and API calls.
+  - Provides informative messages in case of errors.
+- **API Tool Integration Methodology:**  
+  - Integrates with external APIs for data enrichment.
+  - Dynamically extracts entities to call the appropriate API endpoints.
+- **API Chaining and Data Enrichment:**  
+  - Chains API calls to enrich responses with additional data.
+  - Combines document context and API data for comprehensive responses.
+- **Flask API Endpoint:**  
+  - Provides an API endpoint for the RAG system.
+  - Allows users to interact with the system via HTTP POST requests.
+- **Sample Backend Express API:**  
+  - Simulates external APIs for team profiles, investments, sectors, and consultations.
+  - Provides data for enriching responses and supporting portfolio management.
+- **Interactive Conversation Loop:**  
+  - Allows users to type queries and receive context-aware responses.
+  - Supports multiple interactions and follow-up questions.
+
+### Key Technologies Used
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-233C3F?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/)
+[![Ollama](https://img.shields.io/badge/Ollama-FFA500?style=for-the-badge&logo=ollama&logoColor=white)](https://ollama.ai/)
+[![FAISS](https://img.shields.io/badge/FAISS-FFA500?style=for-the-badge&logo=faiss&logoColor=white)](https://ai.meta.com/tools/faiss/)
+[![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![ngrok](https://img.shields.io/badge/ngrok-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)](https://ngrok.com/)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
 
 ## Embedding and Language Models Used
 
@@ -15,7 +77,16 @@ This repository contains a Google Colab Notebook that implements a Retrieval-Aug
 - **Language Model:**  
   The system utilizes the Ollama integration with the `llama2` model to generate natural language responses based on the retrieved context and API data.
 
----
+- **FAISS Vector Store:**  
+  The FAISS vector store is used to efficiently retrieve relevant document content based on user queries. The vector store is built from the embedded text chunks using the `all-MiniLM-L6-v2` model.
+
+- **Flask API:**  
+  The Flask app serves as an API endpoint for the RAG system, allowing users to interact with the system via HTTP POST requests. The app provides a simple and intuitive interface for querying the RAG system and receiving context-aware responses.
+
+- **External APIs & API Chaining:**  
+  The system integrates with external APIs to retrieve additional data related to team profiles, investments, sectors, consultations, and more. These APIs provide valuable insights that enhance the system's responses and support portfolio management activities.
+
+> Note: In this project, the "external APIs" are simulated using a sample backend Express API. The actual APIs can be substituted with real endpoints to access live data of your choice.
 
 ## Strategies for Retrieval Accuracy and Persistent Memory
 
@@ -23,11 +94,24 @@ This repository contains a Google Colab Notebook that implements a Retrieval-Aug
   1. The system downloads a ZIP file of MasterClass documents via the `/api/documents/download` endpoint.
   2. It extracts all text files and splits them into manageable chunks using a `CharacterTextSplitter`.
   3. These text chunks are then embedded using the `all-MiniLM-L6-v2` model and stored in an in-memory FAISS vector store, which allows for efficient retrieval of relevant content based on user queries.
+  4. When a user query is received, the system retrieves the most relevant document chunks using the FAISS vector store and generates a response based on the retrieved context.
+  5. The response is further enriched with data from external APIs to provide comprehensive and accurate information.
+  6. The system uses a combination of document retrieval, external API data, and dynamic entity extraction to generate context-aware responses that address user queries effectively.
 
 - **Persistent Memory:**  
   Conversation history is maintained in a global variable (or via session data) so that context is preserved across multiple user queries. This persistent memory enables the system to handle follow-up questions accurately and generate coherent, context-aware responses.
 
----
+- **Dynamic Entity Extraction:**  
+  Regular expressions are used to extract entities (e.g., person names, company names, sectors, URLs) from the user's query or conversation history. Based on keywords such as "consult", "profile", "investment", "sector", or "scrape", the corresponding API endpoint is called. The retrieved data (or friendly messages if no data is found) is then appended to the prompt used to generate the final response.
+
+- **Error Handling and Robustness:**  
+  The system includes robust error handling mechanisms to gracefully handle failures when retrieving documents, querying external APIs, or processing user queries. By implementing try/except blocks and error checks, the system ensures a smooth user experience and provides informative messages in case of errors.
+
+- **API Tool Integration Methodology:**  
+  The system integrates with multiple API endpoints, including `/ping`, `/api/documents/download`, `/api/team`, `/api/investments`, `/api/sectors`, `/api/consultations`, and `/api/scrape`. Based on the user query or conversation history, the system dynamically extracts entities and calls the appropriate API endpoint to retrieve relevant data. The retrieved information is then used to generate context-aware responses that address the user's query effectively.
+
+- **API Chaining and Data Enrichment:**  
+  The system leverages external APIs to enrich the responses with additional data related to team profiles, investments, sectors, and consultations. By chaining API calls and combining the retrieved data with document context, the system provides comprehensive and up-to-date information to support portfolio management activities.
 
 ## API Tool Integration Methodology
 
@@ -45,13 +129,14 @@ This repository contains a Google Colab Notebook that implements a Retrieval-Aug
   Regular expressions are used to extract entities (e.g., person names, company names, sectors, URLs) from the user's query or conversation history. Based on keywords such as "consult", "profile", "investment", "sector", or "scrape", the corresponding API endpoint is called.  
   The retrieved data (or friendly messages if no data is found) is then appended to the prompt used to generate the final response.
 
----
+- **API Chaining and Data Enrichment:**  
+  The system leverages external APIs to enrich the responses with additional data related to team profiles, investments, sectors, and consultations. By chaining API calls and combining the retrieved data with document context, the system provides comprehensive and up-to-date information to support portfolio management activities.
 
 ## How to Deploy / Use the Code
 
 ### 1. Set Up Your Colab Environment
 
-> **Note:** Please use a Google Colab instance with a GPU (e.g. T4 GPU) for better performance.
+> **Note:** Please use a Google Colab instance with a GPU (e.g. T4 GPU) for better performance. All code are tested and optimized for Google Colab only!
 
 **a. Install the Colab XTerm extension (for command-line support):**
 ```python
@@ -88,16 +173,12 @@ This downloads the model for use.
 ```
 If you see the version number, your Ollama server is running correctly.
 
----
-
 ### 2. Install Required Python Packages
 
 Run the following cell in Colab:
 ```python
 !pip install langchain_community faiss-cpu sentence-transformers requests flask pyngrok
 ```
-
----
 
 ### 3. Run the RAG Script
 
@@ -111,8 +192,6 @@ Copy the full RAG system script (provided in the notebook) into a new cell and r
 **Note:**  
 - Update `API_TOKEN` and `API_BASE_URL` with your credentials.
 - Type queries in the interactive loop. Type `exit` or `quit` to end the session.
-
----
 
 ### 4. Running the Flask App
 
@@ -140,7 +219,40 @@ Copy the full RAG system script (provided in the notebook) into a new cell and r
    ```
    Replace `https://your-ngrok-url.ngrok-free.app` with the actual URL printed by ngrok.
 
----
+## Running the Sample Backend Express API
+
+1. **Install Required Packages:**
+
+   Navigate to the `backend` directory and install the required packages:
+   ```bash
+   cd backend
+   npm install
+   ```
+   
+   Also, don't forget to set up the `.env` file with the following content:
+   ```plaintext
+    MONGO_URI=<your-mongo-uri>
+    PORT=3456
+    ```
+   
+2. **Start the Express Server:**
+
+   Start the Express server:
+   ```bash
+   npm start
+   ```
+   The server will run on `http://localhost:3456`.
+
+3. **Test the API Endpoints:**
+  
+    You can now test the API endpoints using tools like Postman or cURL. For example:
+    ```bash
+    curl http://localhost:3456/api/team
+    ```
+   
+4. **Integrate with the RAG System:**
+
+   Update the Flask app to query the sample backend API endpoints for additional data. You can modify the `/chat` endpoint in the Flask app to call the sample backend API and enrich the responses with relevant information. Also, feel free to make changes to the API as needed if you want it to return different data or support more operations.
 
 ## Demonstration Examples
 
@@ -184,23 +296,6 @@ Below are some example interactions from the notebook (which you can also verify
   ```
 And many more features can be tested interactively in the notebook!
 
----
-
-## Time and Challenges
-
-- **Time to Create:** Approximately 5.5-6 hours.
-- **Challenges Faced:**
-  - Integrating multiple external APIs with robust error handling:
-    - Combining various endpoints (team, investments, sectors, consultations, scrape, ping) with robust error handling was challenging. I overcame this by creating dedicated helper functions and using try/except blocks to gracefully handle any failures.
-  - Implementing dynamic entity extraction using regular expressions:
-    - Implementing dynamic extraction using regular expressions to accurately capture names, companies, sectors, and URLs required several iterations. I refined the regex patterns until the extraction was reliable.
-  - Maintaining conversation context (persistent memory) across queries:
-    - Preserving conversation history across queries was critical for generating context-aware responses. I implemented a global variable (or session mechanism) to store and update conversation history.
-  - Configuring ngrok in Google Colab (including setting the ngrok authtoken) to expose the Flask app:
-    - Exposing the Flask app via ngrok required additional setup, including installing pyngrok and setting the ngrok authtoken. I followed online guides and adjusted parameters to ensure a stable public URL.
-
----
-
 ## Why Use Google Colab
 
 Google Colab provides a free, cloud-based Jupyter notebook environment with GPU support, making it an ideal platform for running AI models, training neural networks, and executing complex computations compared to local machines.
@@ -209,17 +304,32 @@ Thus, I have elected to use Google Colab for this project to leverage its great 
 
 I have also tested the code so that it works on my MacOS (Local) and Windows (Local) machines, with minor adjustments. However, the performance was quite poor compared to Google Colab, so I recommend using Google Colab for the best experience.
 
----
-
 ## Code Sharing 
 
-- **BitBucket Repository:** [https://bitbucket.org/hoangsonw/rag-system-peakspan](https://bitbucket.org/hoangsonw/rag-system-peakspan)
 - **Google Drive Link for the Colab Notebook:** [https://colab.research.google.com/drive/1rIYsnLwLvSit4Xf7VyT_IIFyDFlohyH7?usp=sharing](https://colab.research.google.com/drive/1rIYsnLwLvSit4Xf7VyT_IIFyDFlohyH7?usp=sharing)
 
----
+## Additional Resources
+
+**SHOULD YOU WANT TO LEARN MORE ABOUT AI/ML?**
+
+This repository also contains additional resources that you can utilize to teach yourself and learn AI/ML! Feel free to explore the
+`resources` directory for more information. Resources include:
+
+- [Textual Analysis](resources/Unstructured_Data_Textual_Analysis.ipynb)
+- [Data Science Pipeline](resources/Data_Science_Pipeline.ipynb)
+- [Deep Learning & Neural Networks](resources/Deep_Learning_Neural_Networks.ipynb)
+- [Representation Learning for Recommender Systems](resources/Representation_Learning_Recommender.ipynb)
+- [LLM & Mining CX on Social Media](resources/LLM_Mining_CX.ipynb)
+- [AI & Businesses](resources/AI_and_Businesses.ipynb)
+
+These resources cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
 
 ## Conclusion
 
 This RAG system for portfolio support in Google Colab demonstrates the integration of document retrieval, dynamic entity extraction, and external API calls to generate context-aware responses using a Hugging Face language model via Ollama. The system is designed to provide accurate and informative responses based on user queries and conversation history. By leveraging the power of AI models and external data sources, the system can assist users in accessing relevant information about PeakSpan MasterClasses, team profiles, investments, sectors, and more.
 
 This was a truly enjoyable project to work on, and I hope that the system meets your expectations and provides valuable support for your portfolio management needs. If you have any feedback, suggestions, or additional requirements, please feel free to reach out. Thank you for the opportunity to work on this project, and I look forward to hearing your thoughts on the system! 🚀
+
+---
+
+Thank you for checking out this project today! 🙏

@@ -22,8 +22,8 @@ export const teamMembers: TeamMember[] = Array.from({ length: 5 }).map(() => ({
   related_insights: Array.from({ length: 2 }).map(() => ({
     title: faker.lorem.sentence(),
     date: faker.date.past().toLocaleDateString(),
-    link: faker.internet.url()
-  }))
+    link: faker.internet.url(),
+  })),
 }));
 
 // Generate fake investments data
@@ -47,8 +47,8 @@ export const investments: Investment[] = Array.from({ length: 5 }).map(() => ({
   insights: Array.from({ length: 2 }).map(() => ({
     date: faker.date.recent().toLocaleDateString(),
     title: faker.lorem.sentence(),
-    url: faker.internet.url()
-  }))
+    url: faker.internet.url(),
+  })),
 }));
 
 // Generate fake sectors data
@@ -62,8 +62,12 @@ export interface Sector {
 export const sectors: Sector[] = Array.from({ length: 3 }).map(() => ({
   sector: faker.commerce.department(),
   description: faker.lorem.sentence(),
-  companies: [faker.company.companyName(), faker.company.companyName(), faker.company.companyName()],
-  investment_team: [faker.name.findName(), faker.name.findName()]
+  companies: [
+    faker.company.companyName(),
+    faker.company.companyName(),
+    faker.company.companyName(),
+  ],
+  investment_team: [faker.name.findName(), faker.name.findName()],
 }));
 
 // Generate fake consultations data
@@ -74,9 +78,11 @@ export interface Consultation {
   hours: number;
 }
 
-export const consultations: Consultation[] = Array.from({ length: 3 }).map(() => ({
-  date: faker.date.recent().toLocaleDateString(),
-  company_name: faker.company.companyName(),
-  consultation_details: faker.lorem.sentences(2),
-  hours: faker.datatype.number({ min: 1, max: 5 })
-}));
+export const consultations: Consultation[] = Array.from({ length: 3 }).map(
+  () => ({
+    date: faker.date.recent().toLocaleDateString(),
+    company_name: faker.company.companyName(),
+    consultation_details: faker.lorem.sentences(2),
+    hours: faker.datatype.number({ min: 1, max: 5 }),
+  }),
+);
