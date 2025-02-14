@@ -245,7 +245,7 @@ Copy the full RAG system script (provided in the notebook) into a new cell and r
    ```bash
    npm start
    ```
-   The server will run on `http://localhost:3456`.
+   The server will run on `http://localhost:3456`. Visiting it in your browser should show the API documentation in Swagger UI.
 
 3. **Test the API Endpoints:**
   
@@ -336,4 +336,4 @@ This was a truly enjoyable project to work on, and I hope that the system meets 
 
 ---
 
-Thank you for checking out this project today! 🙏
+Thank you for checking out this project today! 🙏 Happy coding! 🚀
