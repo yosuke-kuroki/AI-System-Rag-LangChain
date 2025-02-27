@@ -8,6 +8,10 @@ Additionally, it also includes a sample backend Express API that can be used to 
 
 - **Author:** [Son Nguyen](https://github.com/hoangsonww)
 
+<p align="center">
+  <img src="resources/RAG_System_Diagram.JPG" alt="LangChain & RAG System for Portfolio Support in Google Colab" width="100%" style="border-radius: 8px">
+</p>
+
 > This project was done as part of the PeakSpan Capital technical assessment & portfolio support project. The Google Colab notebook is at [RAG_LangChain_AI_System.ipynb](RAG_LangChain_AI_System.ipynb).
 
 ## Table of Contents
@@ -23,6 +27,7 @@ Additionally, it also includes a sample backend Express API that can be used to 
 - [Why Use Google Colab](#why-use-google-colab)
 - [Code Sharing](#code-sharing-)
 - [Additional Resources](#additional-resources)
+  - [DO YOU WANT TO LEARN MORE ABOUT AI/ML?](#do-you-want-to-learn-more-about-aiml) 
 - [Conclusion](#conclusion)
 
 ## Key Features
@@ -314,7 +319,7 @@ I have also tested the code so that it works on my MacOS (Local) and Windows (Lo
 
 ## Additional Resources
 
-**SHOULD YOU WANT TO LEARN MORE ABOUT AI/ML?**
+### **DO YOU WANT TO LEARN MORE ABOUT AI/ML?**
 
 This repository also contains additional resources that you can utilize to teach yourself and learn AI/ML! Feel free to explore the
 `resources` directory for more information. Resources include:
@@ -324,15 +329,20 @@ This repository also contains additional resources that you can utilize to teach
 - [Deep Learning & Neural Networks](resources/Deep_Learning_Neural_Networks.ipynb)
 - [Representation Learning for Recommender Systems](resources/Representation_Learning_Recommender.ipynb)
 - [LLM & Mining CX on Social Media](resources/LLM_Mining_CX.ipynb)
+- [AI Agents](resources/AI_Agents_Assistants.ipynb)
 - [AI & Businesses](resources/AI_and_Businesses.ipynb)
+- [Retrieval-Augmented Generation (RAG) System](resources/Retrieval_Augmented_Generation.ipynb)
+- [Storytelling with Data for Stakeholders](resources/Storytelling_with_Data.pdf)
 
-These resources cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
+[These resources](resources) cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
+
+Feel free to also check out my other **[GitHub projects](https://github.com/hoangsonww)** for more AI/ML resources, tutorials, and code samples, or read my **[blog posts](https://devverse-swe.vercel.app)** for insights on AI, machine learning, and SWE topics. I hope you find these resources helpful and informative as you continue your learning journey in AI/ML! 🚀
 
 ## Conclusion
 
 This RAG system for portfolio support in Google Colab demonstrates the integration of document retrieval, dynamic entity extraction, and external API calls to generate context-aware responses using a Hugging Face language model via Ollama. The system is designed to provide accurate and informative responses based on user queries and conversation history. By leveraging the power of AI models and external data sources, the system can assist users in accessing relevant information about PeakSpan MasterClasses, team profiles, investments, sectors, and more.
 
-This was a truly enjoyable project to work on, and I hope that the system meets your expectations and provides valuable support for your portfolio management needs. If you have any feedback, suggestions, or additional requirements, please feel free to reach out. Thank you for the opportunity to work on this project, and I look forward to hearing your thoughts on the system! 🚀
+The system's ability to maintain persistent memory, handle follow-up questions, and enrich responses with external API data makes it a valuable tool for portfolio management and information retrieval tasks. By combining document context, dynamic entity extraction, and API chaining, the system can generate comprehensive and context-aware responses that address user queries effectively.
 
 ---
 
