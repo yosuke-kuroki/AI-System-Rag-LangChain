@@ -12,8 +12,6 @@ Additionally, it also includes a sample backend Express API that can be used to 
   <img src="resources/RAG_System_Diagram.JPG" alt="LangChain & RAG System for Portfolio Support in Google Colab" width="100%" style="border-radius: 8px">
 </p>
 
-> This project was done as part of the PeakSpan Capital technical assessment & portfolio support project. The Google Colab notebook is at [RAG_LangChain_AI_System.ipynb](RAG_LangChain_AI_System.ipynb).
-
 ## Table of Contents
 
 - [Overview](#LangChain--RAG-System-for-Portfolio-Support-in-Google-Colab)
