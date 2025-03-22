@@ -1,0 +1,145 @@
+﻿CustomerID,CustomerName,CustomerNick,Spending,Basket,Trips,PLabel,Organic,Segment,StoreCC
+1128333,"Cole, Pearl",.,297.48,9.3,5.2,2.9,37.7,Yuppies,0
+1174706,"Brooks, Lucy ",Lulu ,324.38,8,14.6,19.1,21.7,Seniors,0
+1221082,"Hamilton, Luke",.,379.4,8.6,14,19.5,28.9,Seniors,1
+1267459,"Ringel, Daniel",.,425.18,9,15.1,32.2,34.9,Families,1
+1313836,"Griffiths, Christina ",Christa ,305.18,11.5,4.3,3,31.6,Yuppies,0
+1360210,"Rios, Keith",.,425.68,11,17.7,38.4,18.6,Families,1
+1406585,"Abbott, Kira",.,467.9,7.8,18.4,35,17.9,Families,1
+1452960,"Harris, Kieron",.,286.33,7.3,10.1,15.4,27.8,Seniors,0
+1499334,"Saunders, Milly",.,327.13,10.2,5.4,5.9,26.1,Yuppies,0
+1545713,"Baker, Gabrielle",.,400.63,9.8,15.9,37.4,16.4,Families,1
+1592088,"Jensen, Eden",.,368.9,9,15.5,21.7,17.7,Seniors,1
+1638461,"Matthews, Ellen ",Ellia ,392.39,8.2,13.4,23.3,21.7,Seniors,1
+1684835,"Pham, Louise ",Loulou ,397.1,9.9,14.3,31,20.9,Families,1
+1731213,"Johnston, Ronald ",Ronny ,340.76,9.6,14.9,27,17.7,Seniors,1
+1777585,"Arnold, Paige",.,331.93,7.6,16.1,30.7,16.2,Families,1
+1823964,"Becker, Ffion",.,286.86,9.6,4.7,2.9,24.1,Yuppies,0
+1870336,"Henderson, Elias",.,325.99,11.3,4.9,2.9,33.3,Yuppies,0
+1916714,"Porter, Esther ",Essie ,408.64,9.3,17.4,34.1,12.1,Families,1
+1963087,"Mckinney, Amina",.,275.14,9,3.9,1.5,33,Yuppies,0
+2009465,"Clayton, Harvey",.,355.09,8.1,17,30.1,16.8,Families,1
+2055841,"Santos, Kyle ",Kye ,318.83,10,4.3,2.9,34.9,Yuppies,0
+2102215,"Luna, Sabrina",.,383.3,8.4,13.8,31.5,18.6,Families,1
+2148592,"Ayala, Rupert ",Bobby ,319.01,11.9,4.1,6.2,32.7,Yuppies,0
+2194966,"Hutchinson, Khadija",.,437.99,11.2,17.2,30.6,17.5,Families,1
+2241340,"Stevens, Aisha",.,387.22,9.6,14.7,29.3,16.2,Families,1
+2287714,"Graves, Marcus",.,297.12,9,4.2,2.9,36.6,Yuppies,0
+2334091,"Heath, Julia",.,380.78,7.6,16.1,22.1,20.7,Seniors,1
+2380469,"Wang, Osian",.,466.83,9,17.9,33.8,17.9,Families,1
+2426843,"Howell, Jeffrey",.,326.7,8.9,10,21.3,22.9,Seniors,0
+2473218,"Dominguez, Amir",.,346.89,8.4,13.8,19.6,20.5,Seniors,0
+2519597,"Lindsey, Harrison",.,406.38,8.9,16.3,26.9,17.7,Families,1
+2565968,"Aguilar, Garfield",.,376.94,10.3,12.1,23.9,20.1,Seniors,1
+2612342,"Robbins, David ",Dave ,348.86,7.9,10.8,17.2,34.9,Seniors,0
+2658713,"Curry, Katie ",Katja ,262.75,9,4.3,3,33.2,Yuppies,0
+2705092,"Barrett, Kimberley",.,346.99,7.7,10,14.3,26.5,Seniors,0
+2751467,"English, Eliza ",Liesl ,374.71,8.4,16.6,26.1,15.7,Families,1
+2797841,"Ford, Aidan",.,416.9,8.2,16,21.1,17.1,Seniors,1
+2844217,"Daniels, Gemma",.,270.78,10.7,2.9,2.9,26.2,Yuppies,0
+2890594,"Bauer, Katherine ",Kaira ,299.7,9.1,3.9,1.5,34.9,Yuppies,0
+2936967,"Valencia, Paula",.,329.5,9.1,17.2,21.6,10.6,Seniors,1
+2983350,"Munoz, Miriam ",Mitzi ,299.13,10.1,3.8,3,31.8,Yuppies,0
+3029726,"Collins, Jacqueline",.,327.54,6.9,12.7,18.4,27.8,Seniors,0
+3076100,"Doyle, Marvin",.,438.34,9.1,17.1,24.4,19.4,Families,1
+3122473,"Estrada, Xander",.,277.9,9.3,4.7,3.1,29.5,Yuppies,0
+3168852,"Graham, Elsie",.,275.21,6.9,3.8,4.6,30.3,Yuppies,0
+3215227,"Morton, Maya",.,477.73,11.3,20.8,30,17.8,Families,1
+3261603,"Valdez, Elise",.,263.12,9.7,3.6,2.9,31.2,Yuppies,0
+3307977,"Edwards, Scott",.,290.15,10,3.4,2.9,34.7,Yuppies,0
+3354353,"Roberts, Lacey",.,376.82,8.7,19.8,27.4,14.5,Families,1
+3400729,"Price, Gloria",.,348.72,8.4,13.4,19.2,19.1,Seniors,0
+3447103,"Rogers, Lena",.,282.66,9.2,4.1,1.4,36.6,Yuppies,0
+3493477,"Waters, Eloise",.,443.29,9.5,20.4,26.8,15.9,Families,1
+3539852,"Fisher, Dale",.,419.59,9.4,16.2,30.4,15.9,Families,1
+3586222,"Williams, Summer",.,382.35,9.6,18.7,32.3,18.1,Families,1
+3632594,"Vaughn, Rosa",.,416.52,9.7,13.7,21.4,28,Seniors,1
+3678964,"French, Dean",.,380.95,9.2,14.7,26.4,22.3,Families,1
+3725339,"Mccoy, Martha",.,285.49,10.2,5.1,3.1,30.5,Yuppies,0
+3771714,"Steele, Emelia",.,293.8,7.4,15.6,26.3,23.9,Families,1
+3818090,"Booth, Lauren",.,381.41,8,15.1,26.8,15.2,Families,1
+3864466,"Wolf, Jonah",.,264.02,10.3,4.6,4.3,28.8,Yuppies,0
+3910840,"Benson, Rachael",.,311.54,11.4,4.4,4.7,32,Yuppies,0
+3957213,"Gardner, Millicent ",Millie ,366.25,6.6,14.7,22.5,19.8,Families,1
+4003586,"Henry, Agnes ",Nessa ,315.69,7.4,11.2,20,21,Seniors,0
+4049957,"Ingram, Ben",.,402.39,8.9,16.3,30.9,17.6,Families,1
+4096333,"Clarke, Rosemary",.,401.15,9,15.8,25.9,22.9,Seniors,1
+4142708,"Lynch, Laura ",Lori ,415.24,9,16.1,34.7,14.3,Families,1
+4189081,"Solis, Gregory ",Greg ,315.01,11.2,5.1,2.9,39.5,Yuppies,0
+4206258,"Milk, Harvey",.,265.73,14.3,4.8,20.8,24.8,Seniors,0
+4235456,"Lloyd, Faye ",Fay ,356.3,8.4,12.9,34.7,16.1,Families,1
+4281833,"Mcgrath, Stacey ",Nastia ,347.69,6.5,12.8,14.8,23.8,Seniors,0
+4328211,"Cummings, Bailey",.,299.63,10.3,4,3,33.4,Yuppies,0
+4374584,"Scott, Maxwell ",Max ,341.35,8.4,12.1,28.5,22,Families,1
+4386843,"Mueller, Walter",.,270.97,11,5.8,14.9,21.4,Seniors,0
+4420958,"Austin, Isobel",.,386.97,9.1,20.4,34.4,22.6,Families,1
+4467332,"Cullen, Amirah",.,303.76,7.9,11.5,21,25.2,Seniors,0
+4497050,"Niesen, Mechthild",Uschi,267.22,14.8,8.5,23.1,16,Seniors,0
+4513708,"Garza, Roosevelt",.,322.38,11.7,3.7,5.9,37.1,Yuppies,0
+4560087,"Briggs, Eleanor ",Ella ,376.71,6.6,13.2,22.5,26.4,Seniors,1
+4573184,"Miller, Elizabeth",Else,220.47,10,5.9,14.8,22.7,Seniors,0
+4606462,"Rivera, Cassie",.,379.38,8,15.1,27.3,18,Families,1
+4623682,"Davis, Petra",.,235.62,13.3,6.2,20.6,27.1,Seniors,0
+4652832,"Cross, Jay",.,306.16,7.4,8.8,16.3,28.3,Seniors,0
+4699210,"Thomas, Amanda ",Manda ,370.61,8.4,15.8,23.9,19,Families,1
+4707878,"Hofman, Emily",.,292.7,14.5,6.8,20.3,16.3,Seniors,0
+4745585,"Hill, Tristan",.,426.13,8.3,19.4,27.7,14.3,Families,1
+4765614,"Helding, Christiane",.,213,12.2,3.7,14.4,31.7,Seniors,0
+4791958,"Wells, Mae",.,357.74,8.9,15.6,28.5,16.8,Families,1
+4838331,"Montgomery, Willard ",Billy ,303.24,10.5,4.1,4.4,28.3,Yuppies,0
+4884705,"Daniel, Jerry",.,416.06,9.2,13.8,33.8,16.8,Families,1
+4905342,"Muecke, Christian",Hans,285.71,16.6,9.4,24.2,21.2,Seniors,0
+4931078,"Byrne, Irene ",Rina ,298.7,10.7,3.8,3.1,31.7,Yuppies,0
+4977451,"Potter, Ray",.,358.36,8.2,14.8,25,13.6,Seniors,0
+5023823,"Paul, Harris",.,391.6,9.3,12.1,21.4,23,Seniors,1
+5070199,"Wilson, Robin",.,292.5,9.1,3.7,4.5,33.8,Yuppies,0
+5076666,"Zachmann, Frank",.,439.32,20.7,8.7,24.3,23.9,Families,1
+5116575,"Poole, Tina",.,422.49,9.6,17.4,32,18.3,Families,1
+5162947,"Leonard, Zara",.,300.67,10.5,3.3,4.8,30.8,Yuppies,0
+5166721,"Sandmann, Bjoern",.,381.39,19.7,7.8,30.4,15.6,Families,1
+5209321,"Dunn, Jon ",Jax ,433.19,8.9,17.1,27.9,20.7,Families,1
+5243769,"Zilch, Dominique",.,365.75,20.8,6.6,27.4,24.5,Families,1
+5255698,"Hammond, Marnie",.,369.27,6.8,12.8,20.1,23.1,Seniors,1
+5275480,"Bland, Tasha",.,365.43,19.3,8.6,26.9,21.1,Families,1
+5302070,"Silva, Salma",.,325.11,7.2,12.2,14.9,24.4,Seniors,0
+5348446,"Bass, Jay",.,346.68,8.2,11.8,15.8,30.2,Seniors,0
+5394818,"Jennings, Peter ",Pete ,370.17,10.2,17,37.3,20.6,Families,1
+5441194,"O'Quinn, Sarah ",Sadie ,402.14,9.2,14.8,22.7,18,Seniors,1
+5465638,"Lopez, Jen",Jlo,405.62,23.5,7.4,32.5,10.3,Families,1
+5465913,"Cruise, Tom",.,422.69,22.7,6.9,27.3,19,Families,1
+5487565,"Owen, Lia",.,309.15,6,9.1,15.2,23.7,Seniors,0
+5533943,"Lambert, Aiden",.,374.62,8.4,15.3,17.8,21.6,Seniors,1
+5580321,"Mack, Benjamin ",Ben ,385.17,8.7,13.5,19.6,24.3,Seniors,1
+5597971,"Knighly, Keira",.,377.6,19.2,7.1,26.4,21.5,Families,1
+5626699,"Allen, Deborah",.,275.23,10.1,6.4,3,39.4,Yuppies,1
+5673073,"Hoffman, Nellie ",Nella ,368.86,10,19.7,34.6,18,Families,1
+5719448,"Lyons, Shaun",.,398.61,9,14.1,21.6,23.6,Seniors,1
+5765826,"Frazier, Hamza",.,375.78,7.5,15.6,28.4,18.1,Families,1
+5770566,"Norris, Chuck",.,347.42,12.1,3.7,3,21.5,Yuppies,0
+5812204,"Jackson, Stephanie",.,309.69,10.2,4.6,6.3,25.3,Yuppies,0
+5858580,"Romero, Homer",.,331.96,8.7,12,18.4,22.9,Seniors,0
+5864587,"Trump, Don",.,258.4,9,2.9,1.5,24.5,Yuppies,0
+5904955,"Jordan, Iqra",.,298.77,6.9,8.3,14.9,26.1,Seniors,0
+5951332,"Palmer, Harmony",.,417.17,9.2,17.5,23.3,25.9,Seniors,1
+5952502,"Sanders, Bernie",.,283.94,9.1,4.1,1.5,39.3,Yuppies,0
+5997711,"Flores, Holly",.,339.53,7.7,12.4,18.4,26.9,Seniors,0
+6037584,"Wall, Even",.,285.66,10.2,4.9,2.9,34.8,Yuppies,0
+6038216,"Spencer, Marc",Spence,326.28,11,3.9,2.9,44.5,Yuppies,0
+6044081,"Marsh, Dorothy ",Dorte ,270.21,8.6,4.8,3,38.3,Yuppies,0
+6090455,"Young, Nicholas ",Nicky ,351.52,8.2,15.9,29.4,17.2,Families,1
+6136829,"Norman, Albert ",Al ,374.25,9.9,20.1,37.8,15.1,Families,1
+6183201,"Lowe, Lachlan",.,410.25,7.6,17.5,26.9,23.9,Families,1
+6229576,"Aguirre, Joshua ",Josh ,390.85,8.5,17.7,32.7,18.6,Families,1
+6275950,"Kelley, Niamh",.,298.46,10.5,4,2.9,33.5,Yuppies,0
+6322328,"Beck, Madeline",.,321.83,7.3,12.5,15.9,29.3,Seniors,0
+6368710,"Franklin, Felix",.,369.5,9.9,13.6,23,29.4,Seniors,1
+6415085,"Frank, Demi",.,298.61,11,4.3,6.2,25.8,Yuppies,0
+6461461,"Newman, Leyla",.,342.6,9,10.8,19.4,27.3,Seniors,1
+6507835,"Rowe, Lawrence ",Larry ,347.46,13.4,4.2,6,38,Yuppies,1
+6554212,"Johnson, Anas",.,278.77,9.5,4.3,3,32.8,Yuppies,0
+6600582,"Miller, Zack",.,291.82,9.3,4,1.6,47.8,Yuppies,0
+6646955,"Adkins, Marie",.,397.57,9,16.9,32.2,13.8,Families,1
+6693328,"Grant, Casey",.,410.23,9.6,16.3,33.1,15.5,Families,1
+6739706,"Williamson, Leila",.,306.72,10.3,4.2,2.9,34.1,Yuppies,0
+6786087,"Rice, Josh ",Joss ,351.49,9,9.8,17.9,17.4,Seniors,0
+6832466,"Hughes, Alannah",.,311.44,10.6,4.9,8.7,34.6,Yuppies,0

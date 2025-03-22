@@ -331,6 +331,8 @@ This repository also contains additional resources that you can utilize to teach
 - [AI & Businesses](resources/AI_and_Businesses.ipynb)
 - [Retrieval-Augmented Generation (RAG) System](resources/Retrieval_Augmented_Generation.ipynb)
 - [Storytelling with Data for Stakeholders](resources/Storytelling_with_Data.pdf)
+- [k-Nearest Neighbors (k-NN) Algorithm](resources/k-Nearest-Neighbors.ipynb)
+- [Decision Trees & Ensemble Learning](resources/Decision_Trees_Ensemble_Learning.ipynb)
 
 [These resources](resources) cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
 
