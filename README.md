@@ -333,6 +333,9 @@ This repository also contains additional resources that you can utilize to teach
 - [Storytelling with Data for Stakeholders](resources/Storytelling_with_Data.pdf)
 - [k-Nearest Neighbors (k-NN) Algorithm](resources/k-Nearest-Neighbors.ipynb)
 - [Decision Trees & Ensemble Learning](resources/Decision_Trees_Ensemble_Learning.ipynb)
+- [Synthetic Experts](resources/Synthetic_Experts.pdf)
+- [Confusion Matrix](resources/Confusion_Matrix.ipynb)
+- [Regression](resources/Regression.ipynb)
 
 [These resources](resources) cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
 
