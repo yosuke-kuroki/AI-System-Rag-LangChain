@@ -6,8 +6,6 @@ In addition to that, this repository also contains a Flask app that serves as an
 
 Additionally, it also includes a sample backend Express API that can be used to interact with the RAG system. The system can (and should) query from the API to get more data to generate better-informed responses.
 
-- **Author:** [Son Nguyen](https://github.com/hoangsonww)
-
 <p align="center">
   <img src="resources/RAG_System_Diagram.JPG" alt="LangChain & RAG System for Portfolio Support in Google Colab" width="100%" style="border-radius: 8px">
 </p>
@@ -338,8 +336,6 @@ This repository also contains additional resources that you can utilize to teach
 - [Regression](resources/Regression.ipynb)
 
 [These resources](resources) cover a wide range of topics, from textual analysis and data science pipelines to deep learning, neural networks, and representation learning for recommender systems. You can use these resources to enhance your knowledge and skills in AI/ML and apply them to real-world projects and applications.
-
-Feel free to also check out my other **[GitHub projects](https://github.com/hoangsonww)** for more AI/ML resources, tutorials, and code samples, or read my **[blog posts](https://devverse-swe.vercel.app)** for insights on AI, machine learning, and SWE topics. I hope you find these resources helpful and informative as you continue your learning journey in AI/ML! 🚀
 
 ## Conclusion
 
